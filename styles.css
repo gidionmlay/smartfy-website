@@ -86,6 +86,7 @@ body {
     transform: translateY(-15px) scale(1.02);
     border-color: rgba(99, 102, 241, 0.3);
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+    background-color: #dc2626;
 }
 
 .solution-card:hover::before {
@@ -148,6 +149,7 @@ body {
 .solution-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+    background-color: #dc2626;
 }
 
 /* About Section Styles */
@@ -336,6 +338,7 @@ body {
 .value-card:hover {
     transform: translateY(-5px);
     border-color: rgba(99, 102, 241, 0.3);
+    background-color: #dc2626;
 }
 
 .value-icon {
@@ -490,6 +493,7 @@ body {
 .submit-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 15px 35px rgba(99, 102, 241, 0.4);
+    background-color: #dc2626;
 }
 
 /* Footer Styles */
@@ -1282,6 +1286,7 @@ body::after {
 
 .stat-card:hover::before {
     opacity: 1;
+    background-color: #dc2626;
 }
 
 .stat-number {
@@ -1419,6 +1424,7 @@ body::after {
         0 40px 80px rgba(0, 0, 0, 0.15),
         0 0 50px rgba(99, 102, 241, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    background-color: #dc2626;    
 }
 
 .feature-card:hover::before {
@@ -1735,7 +1741,7 @@ body::after {
     border-color: rgba(99, 102, 241, 0.3);
     box-shadow: 
         0 30px 60px rgba(0, 0, 0, 0.226),
-        0 0 50px rgba(255, 17, 17, 0.183),
+        0 0 50px rgba(255, 15, 15, 0.763),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
@@ -1804,6 +1810,7 @@ body::after {
 
 .step-badge:hover::before {
     left: 100%;
+    background-color: #dc2626;
 }
 
 .step-content h3 {
