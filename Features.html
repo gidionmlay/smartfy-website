@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartfy Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/5829e3bded.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Header -->
+    <header class="header">
+    <div class="logo">
+        <img src="Images/smartfy_logo_dark_navy_blue-removebg-preview (1).png" height="45" width="200" alt="Smartfy Logo">
+    </div>
+    <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#about">About</a>
+        <a href="#reach">Reach Us</a>
+    </nav>
+    <a href="login page.html"><button class="get-started-btn">Login</button></a>
+
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+    <svg class="hero-svg" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/s">
+      <defs>
+        <!-- Gradients -->
+        <linearGradient id="robotBodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#e2e8f0;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#cbd5e1;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#94a3b8;stop-opacity:1" />
+        </linearGradient>
+        
+        <linearGradient id="robotHeadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#e2e8f0;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#cbd5e1;stop-opacity:1" />
+        </linearGradient>
+        
+        <radialGradient id="eyeGradient" cx="50%" cy="30%" r="70%">
+          <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+          <stop offset="70%" style="stop-color:#0284c7;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#0369a1;stop-opacity:1" />
+        </radialGradient>
+        
+        <linearGradient id="buttonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+        </linearGradient>
+        
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+          <feMerge> 
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+        
+        <filter id="robotShadow">
+          <feDropShadow dx="0" dy="10" stdDeviation="8" flood-opacity="0.3"/>
+        </filter>
+      </defs>
+      
+      <!-- Background decorative elements -->
+      <circle cx="100" cy="150" r="3" fill="#6366f1" opacity="0.3">
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="200" cy="250" r="2" fill="#8b5cf6" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="150" cy="350" r="2.5" fill="#ec4899" opacity="0.3">
+        <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Beta Badge -->
+      <g transform="translate(600, 80)">
+        <rect x="-750" y="90" width="580" height="30" rx="15" fill="rgba(239, 68, 68, 0.2)" stroke="rgba(239, 68, 68, 0.5)" stroke-width="1"/>
+        <circle cx="-725" cy="100" r="4" fill="#ef4444"/>
+        <text x="-700" y="114" font-family="Arial, sans-serif" font-size="30" font-weight="600" fill="#ef4444">Chatbot Integration with IoT devices</text>
+      </g>
+      
+      <!-- Main Heading -->
+      <text x="-90" y="300" font-family="Arial, sans-serif" font-size="60" font-weight="700" items-align="right" fill="white" text-anchor="left">
+        Control your IoT
+      </text>
+      <text x="150" y="350" font-family="Arial, sans-serif" font-size="60" font-weight="700" fill="white" text-anchor="middle">
+        with natural language.
+      </text>
+      
+      <!-- Subtitle -->
+      <text x="100" y="390" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.7)" text-anchor="middle">
+        Connect your smart devices and systems with AI. Where smart technology meets
+      </text>
+      <text x="100" y="410" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.7)" text-anchor="middle">
+        user-friendly chat interactions.
+      </text>
+      
+      <!-- Get Started Button -->
+      <g transform="translate(320, 270)">
+        <rect x="-300" y="210" width="120" height="40" rx="8" fill="url(#buttonGradient)" filter="url(#glow)"/>
+        <text x="-240" y="235" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">Explore</text>
+      </g>
+        <!-- Robot SVG -->
+        <g transform="translate(850, 280)" filter="url(#robotShadow)">
+        
+        <image href="Images/ai_chatbot-removebg-preview.png" x="-50" y="-99" width="600" height="700" />
+
+        <!-- Floating animation -->
+        <animateTransform attributeName="transform" type="translate" values="850,280; 850,270; 850,280" dur="3s" repeatCount="indefinite"/>
+      </g>
+    </svg>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats">
+    <div class="stat-card">
+        <div class="stat-number">50 +</div>
+        <div class="stat-label">IoT Customers Supported</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">20 +</div>
+        <div class="stat-label">Smart Platform Integrations</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">36+</div>
+        <div class="stat-label">Voice Requests</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">5 +</div>
+        <div class="stat-label">Average Commands response time</div>
+    </div>
+    </section>
+    
+    <!-- Technology Icons -->
+     <div>
+    <h2 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Technologies We Use</h2>
+     </div>
+    <section class="tech-icons">
+    <div class="tech-icon"><i class="uil uil-analysis"></i> </div>
+    <div class="tech-icon"><i class="uil uil-home"></i> </div>
+    <div class="tech-icon"><i class="uil uil-wrench"></i> </div>
+    <div class="tech-icon"><i class="uil uil-message"></i> </div>
+    <div class="tech-icon"><i class="uil uil-bolt"></i> </div>
+    </section>
+    
+    <!-- AI Features Section -->
+    <section class="ai-features">
+    <h2>Harness the power of AI, making<br>IoT control intuitive and effective for all skill levels.</h2>
+    
+    <div class="feature-cards">
+        <div class="feature-card">
+            <div class="feature-header">
+                <div class="feature-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="feature-title">AI Powered Threat Detection</div>
+            </div>
+            <p class="feature-description">Intelligently alerts for advanced security</p>
+            <div class="feature-stats">
+                <div class="feature-stat">
+                    <div class="feature-stat-number">10.15%</div>
+                    <div class="feature-stat-label">% Security enhanced by 73% in network using our AI</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="feature-card">
+            <div class="feature-header">
+                <div class="feature-icon"><i class="fa-solid fa-atom-simple"></i></div>
+                <div class="feature-title">Cloud reporting</div>
+            </div>
+            <p class="feature-description">Real-time data for your IoT ecosystem</p>
+            <div class="feature-stats">
+                <div class="feature-stat">
+                    <div class="feature-stat-number">59.8K</div>
+                    <div class="feature-stat-label">Reporting Services</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    <!-- IoT Efforts Section -->
+    <section class="iot-efforts">
+    <h2>Elevate your IoT efforts.</h2>
+    
+    <div class="effort-grid">
+        <div class="effort-card">
+            <div class="effort-icon"><i class="fa-solid fa-microchip"></i></div>
+            <div class="effort-title">Plug and Play Integration</div>
+            <div class="effort-description">Seamlessly connect Smart's ecosystem with your existing IoT devices without complex configurations. Our AI adapts, integrates in quick and makes everything work seamlessly.</div>
+        </div>
+    
+        <div class="effort-card">
+            <div class="effort-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="effort-title">Customized Embedded Solutions</div>
+            <div class="effort-description">Deploy tailored cloud-based Smartfy with your embedded systems, making your own custom solutions that work perfectly with our AI platform.</div>
+        </div>
+    
+        <div class="effort-card">
+            <div class="effort-icon"><i class="fa-regular fa-handshake"></i></div>
+            <div class="effort-title">IoT Ready & Developer Friendly</div>
+            <div class="effort-description">Smartfy is IoT-powered, cloud-optimized and API-first. Easy for developers to integrate into their existing systems while being flexible enough to scale across operations.</div>
+        </div>
+    
+        <div class="effort-card">
+            <div class="effort-icon"><i class="fa-regular fa-gears"></i></div>
+            <div class="effort-title">Context automation</div>
+            <div class="effort-description">Define your IoT rules once and project intelligent automation based on time, location, and usage patterns.</div>
+        </div>
+    
+        <div class="effort-card">
+            <div class="effort-icon"><i class="fa-solid fa-sliders"></i></div>
+            <div class="effort-title">IoT goal setting</div>
+            <div class="effort-description">Track your smart home goals with clear dashboard monitoring.</div>
+        </div>
+    
+        <div class="effort-card">
+            <div class="effort-icon"><i class="fa-regular fa-bell"></i></div>
+            <div class="effort-title">Real-time notifications</div>
+            <div class="effort-description">Stay updated with your IoT ecosystem status, warnings, and alerts.</div>
+        </div>
+    
+        <div class="effort-card">
+            <div class="effort-icon"><i class="fa-solid fa-sitemap"></i></div>
+            <div class="effort-title">On-site optimization</div>
+            <div class="effort-description">Monitor and optimize your smart devices for peak efficiency and lower power consumption.</div>
+        </div>
+    
+        <div class="effort-card">
+            <div class="effort-icon"><i class="fa-solid fa-table-list"></i></div>
+            <div class="effort-title">Competitor reports</div>
+            <div class="effort-description">Compare Smart home devices and optimize your setup with competitive analysis and performance benchmarks.</div>
+        </div>
+    
+        <div class="effort-card">
+            <div class="effort-icon"><i class="fa-solid fa-wand-sparkles"></i></div>
+            <div class="effort-title">Smart Voice Generator</div>
+            <div class="effort-description">Transform your IoT commands into smart, voice-enabled interactions with natural language processing.</div>
+        </div>
+    </div>
+    </section>
+    
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+    <h2>How It Works</h2>
+    
+    <div class="workflow-container">
+        <div class="workflow-line"></div>
+        
+        <div class="workflow-step">
+            <div class="step-dot"></div>
+            <div class="step-content step-right">
+                <div class="step-badge">STEP 1</div>
+                <h3>PROJECT DEFINITION</h3>
+                <ul>
+                    <li>VALIDATE IOT COMMUNICATION, NFC API</li>
+                    <li>CUSTOM USE CASE ANALYSIS</li>
+                    <li>REQUIREMENT MAPPING WORKSHOPS</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="workflow-step">
+            <div class="step-dot"></div>
+            <div class="step-content step-left">
+                <div class="step-badge">STEP 2</div>
+                <h3>SYSTEM CONFIGURATION</h3>
+                <ul>
+                    <li>SET-UP IOT DEVICE SETUP</li>
+                    <li>SECURE API KEY GENERATION</li>
+                    <li>OPTIMIZE CURRENT INTEGRATIONS</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="workflow-step">
+            <div class="step-dot"></div>
+            <div class="step-content step-right">
+                <div class="step-badge">STEP 3</div>
+                <h3>CHAT INTEGRATION</h3>
+                <ul>
+                    <li>UI DESIGN: USER TRAINING</li>
+                    <li>REAL-TIME COMMAND EXECUTION</li>
+                    <li>DEVICE AI APP NOTIFICATIONS</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="workflow-step">
+            <div class="step-dot"></div>
+            <div class="step-content step-left">
+                <div class="step-badge">STEP 4</div>
+                <h3>TESTING & VALIDATION</h3>
+                <ul>
+                    <li>FUNCTIONALITY TESTING</li>
+                    <li>COMMAND EXECUTION VERIFICATION</li>
+                    <li>USER ACCEPTANCE TESTING</li>
+                    <li>PERFORMANCE TESTING</li>
+                    <li>DEVICE COMPATIBILITY</li>
+                    <li>LOAD AND STRESS TESTING</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <button class="consultation-btn">Contact us now for a free consultation</button>
+    </section>
+    
+    <!-- Our Clients Section -->
+    <section class="our-clients">
+    <h2>Our clients</h2>
+    <p class="clients-subtitle">User feedback from our solutions have boosted project success for users like you.</p>
+    
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="client-slide">
+                <div class="client-logo">🏢</div>
+                <h3>Dream Tech</h3>
+                <p>"Smartfy transformed our IoT infrastructure. The natural language control has made our operations 50% more efficient."</p>
+                <div class="client-rating">⭐⭐⭐⭐⭐</div>
+            </div>
+            
+            <div class="client-slide">
+                <div class="client-logo">🏭</div>
+                <h3>Gidion Solutions</h3>
+                <p>"The AI-powered threat detection saved us from multiple security breaches. Outstanding platform!"</p>
+                <div class="client-rating">⭐⭐⭐⭐⭐</div>
+            </div>
+            
+            <div class="client-slide">
+                <div class="client-logo">🏠</div>
+                <h3>IBSUC Inc</h3>
+                <p>"Seamless integration with all our devices. Our customers love the voice control features."</p>
+                <div class="client-rating">⭐⭐⭐⭐⭐</div>
+            </div>
+            
+            <div class="client-slide">
+                <div class="client-logo">🌐</div>
+                <h3>Insidigital Technologies</h3>
+                <p>"Real-time monitoring and cloud reporting features are exactly what we needed for our enterprise clients."</p>
+                <div class="client-rating">⭐⭐⭐⭐⭐</div>
+            </div>
+            
+            <div class="client-slide">
+                <div class="client-logo"><i class="fa-regular fa-bolt"></i></div>
+                <h3>Energy Solutions Ltd</h3>
+                <p>"The automation capabilities helped us reduce energy consumption by 30% across all our installations."</p>
+                <div class="client-rating">⭐⭐⭐⭐⭐</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="carousel-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
+        <span class="dot" data-slide="4"></span>
+    </div>
+    </section>
+    
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
+    <div class="section-header">
+        <h2>Our Solutions</h2>
+        <p>Comprehensive IoT solutions tailored for every industry and use case</p>
+    </div>
+    
+    <div class="solutions-grid">
+        <div class="solution-card">
+            <div class="solution-icon"><i class="fa-solid fa-house-signal"></i></div>
+            <h3>Smart Home Solutions</h3>
+            <p>Transform your home into an intelligent living space with seamless device integration and voice control.</p>
+            <ul>
+                <li>Automated lighting and climate control</li>
+                <li>Security and surveillance systems</li>
+                <li>Energy monitoring and optimization</li>
+                <li>Voice-activated device management</li>
+            </ul>
+            <button class="solution-btn">Learn More</button>
+        </div>
+    
+        <div class="solution-card">
+            <div class="solution-icon"><i class="fa-solid fa-industry"></i></div>
+            <h3>Industrial IoT</h3>
+            <p>Revolutionize your manufacturing processes with smart sensors, predictive maintenance, and real-time monitoring.</p>
+            <ul>
+                <li>Predictive maintenance alerts</li>
+                <li>Real-time equipment monitoring</li>
+                <li>Supply chain optimization</li>
+                <li>Quality control automation</li>
+            </ul>
+            <button class="solution-btn">Learn More</button>
+        </div>
+    
+        <div class="solution-card">
+            <div class="solution-icon"><i class="fa-solid fa-building"></i></div>
+            <h3>Enterprise Solutions</h3>
+            <p>Scale your business operations with enterprise-grade IoT infrastructure and advanced analytics.</p>
+            <ul>
+                <li>Multi-site management dashboard</li>
+                <li>Advanced security protocols</li>
+                <li>Custom API integrations</li>
+                <li>24/7 support and monitoring</li>
+            </ul>
+            <button class="solution-btn">Learn More</button>
+        </div>
+    
+        <div class="solution-card">
+            <div class="solution-icon"><i class="fa-solid fa-tractor"></i></div>
+            <h3>Smart Agriculture</h3>
+            <p>Optimize crop yields and reduce waste with precision agriculture and environmental monitoring.</p>
+            <ul>
+                <li>Soil moisture and nutrient monitoring</li>
+                <li>Weather prediction integration</li>
+                <li>Automated irrigation systems</li>
+                <li>Crop health analytics</li>
+            </ul>
+            <button class="solution-btn">Learn More</button>
+        </div>
+    
+        <div class="solution-card">
+            <div class="solution-icon"><i class="fa-solid fa-stethoscope"></i></div>
+            <h3>Healthcare IoT</h3>
+            <p>Enhance patient care with connected medical devices and real-time health monitoring systems.</p>
+            <ul>
+                <li>Remote patient monitoring</li>
+                <li>Medical device integration</li>
+                <li>Emergency alert systems</li>
+                <li>Health data analytics</li>
+            </ul>
+            <button class="solution-btn">Learn More</button>
+        </div>
+    
+        <div class="solution-card">
+            <div class="solution-icon"><i class="fa-solid fa-car"></i></div>
+            <h3>Smart Transportation</h3>
+            <p>Build intelligent transportation systems with connected vehicles and traffic optimization.</p>
+            <ul>
+                <li>Fleet management solutions</li>
+                <li>Traffic flow optimization</li>
+                <li>Vehicle telematics</li>
+                <li>Route planning and logistics</li>
+            </ul>
+            <button class="solution-btn">Learn More</button>
+        </div>
+    </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+    <div class="about-hero">
+        <div class="about-content">
+            <h2>About Smartfy</h2>
+            <p>We're pioneering the future of IoT with natural language processing, making smart technology accessible to everyone.</p>
+        </div>
+        <div class="about-image">
+            <div class="floating-robot">
+                <img src="Images/smartfy_icon.png" height="200" width="250" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <div class="about-story">
+        <div class="story-grid">
+            <div class="story-text">
+                <h3>Our Mission</h3>
+                <p>To democratize IoT technology by making it as simple as having a conversation. We believe that everyone should be able to control their smart devices naturally, without complex technical knowledge.</p>
+            </div>
+            <div class="story-stats">
+                <div class="mini-stat">
+                    <div class="mini-stat-number">2019</div>
+                    <div class="mini-stat-label">Founded</div>
+                </div>
+                <div class="mini-stat">
+                    <div class="mini-stat-number">5+</div>
+                    <div class="mini-stat-label">Team Members</div>
+                </div>
+                <div class="mini-stat">
+                    <div class="mini-stat-number">100+</div>
+                    <div class="mini-stat-label">Happy Customers</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="team-section">
+        <h3>Meet Our Team</h3>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-avatar"><i class="fa-solid fa-user"></i></div>
+                <h4>Tamimi Rashid</h4>
+                <p>CEO & Founder</p>
+                <span>IoT visionary with 15+ years in tech</span>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar"><i class="fa-solid fa-user"></i></div>
+                <h4>Calvin</h4>
+                <p>CTO</p>
+                <span>AI/ML expert and system architect</span>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar"><i class="fa-solid fa-user"></i></div>
+                <h4>Mussap</h4>
+                <p>Head of Research</p>
+                <span>Bachelor degree in Computer Science, NLP specialist</span>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar"><i class="fa-solid fa-user"></i></div>
+                <h4>calvin</h4>
+                <p>Head of Design</p>
+                <span>UX/UI designer focused on accessibility</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="values-section">
+        <h3>Our Values</h3>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon"><i class="fa-solid fa-robot"></i></div>
+                <h4>Innovation</h4>
+                <p>We constantly push the boundaries of what's possible with IoT and AI technology.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                <h4>Accessibility</h4>
+                <p>Technology should be accessible to everyone, regardless of technical expertise.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fa-solid fa-lock"></i></div>
+                <h4>Security</h4>
+                <p>We prioritize data security and privacy in every solution we build.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fa-solid fa-globe"></i></div>
+                <h4>Sustainability</h4>
+                <p>Our solutions help create more efficient and sustainable smart environments.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    <!-- Contact/Reach Us Section -->
+    <section id="reach" class="contact">
+    <div class="contact-hero">
+        <h2>Get in Touch</h2>
+        <p>Ready to transform your IoT experience? Let's start the conversation.</p>
+    </div>
+    
+    <div class="contact-content">
+        <div class="contact-info">
+            <div class="contact-method">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-details">
+                    <h4>Email Us</h4>
+                    <a href="tamimurashid@gmail.com"><p>smartfytechnologies@gmail.com</p></a>
+                    <span>We'll respond within 24 hours</span>
+                </div>
+            </div>
+    
+            <div class="contact-method">
+                <div class="contact-icon"><i class="fa-regular fa-phone"></i></div>
+                <div class="contact-details">
+                    <h4>Call Us</h4>
+                    <a href="tel:+255621351603"><p>+255 621351603</p></a>
+                    <span>Mon-Fri, 9AM-6PM EST</span>
+                </div>
+            </div>
+    
+            <div class="contact-method">
+                <div class="contact-icon"><i class="fa-regular fa-comments"></i></div>
+                <div class="contact-details">
+                    <h4>Live Chat</h4>
+                    <p>Available 24/7</p>
+                    <span>Get instant support</span>
+                </div>
+            </div>
+    
+            <div class="contact-method">
+                <div class="contact-icon"><i class="fa-regular fa-location-dot"></i></div>
+                <div class="contact-details">
+                    <h4>Visit Us</h4>
+                    <p>132 Njiro, Arusha, Tanzania</p>
+                    <span>Open for scheduled meetings</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Company (Optional)">
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Select a Service</option>
+                        <option value="smart-home">Smart Home Solutions</option>
+                        <option value="industrial">Industrial IoT</option>
+                        <option value="enterprise">Enterprise Solutions</option>
+                        <option value="agriculture">Smart Agriculture</option>
+                        <option value="healthcare">Healthcare IoT</option>
+                        <option value="transportation">Smart Transportation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Tell us about your project..." rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="Images/smartfy_logo_dark_navy_blue-removebg-preview (1).png" height="100" width="200" alt="">
+                </div>
+                <p>Making IoT accessible through natural language. Connect, control, and automate your smart devices with the power of AI.</p>
+                <div class="social-links">
+                    <a href="https://github.com/tamimurashid" class="social-btn"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#solutions">Smart Home</a></li>
+                        <li><a href="#solutions">Industrial IoT</a></li>
+                        <li><a href="#solutions">Enterprise</a></li>
+                        <li><a href="#solutions">Healthcare</a></li>
+                        <li><a href="#solutions">Agriculture</a></li>
+                        <li><a href="#solutions">Transportation</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#about">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#reach">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-newsletter">
+            <div class="newsletter-content">
+                <h4>Stay Updated</h4>
+                <p>Get the latest IoT insights and product updates delivered to your inbox.</p>
+            </div>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2025 Smartfy Technologies. All rights reserved.</p>
+    
+        </div>
+    </div>
+    </footer>
+    </body>
+    <script src="main.js"></script>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartfy – Register</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #c41616;
+            --secondary-color: #5748ff;
+            --background-dark: #000515;
+            --card-bg: #f33d3d;
+            --text-light: #ffffff;
+            --text-muted: #808080;
+            --accent-red: #f43131;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--background-dark);
+            color: var(--card-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        /* Glowing background circles */
+    .bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(32px);
+      opacity: 0.8;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .bg-purple {
+      width: 350px; height: 350px;
+      left: -120px; top: 80px;
+      background: radial-gradient(circle at 60% 40%, #f91818 0%, #5616c4 80%);
+    }
+    .bg-orange {
+      width: 260px; height: 260px;
+      right: -100px; bottom: 40px;
+      background: radial-gradient(circle at 40% 60%, #ff7c1c 0%, #f43131 80%);
+    }
+    .bg-dot1 {
+      width: 24px; height: 24px;
+      left: 60px; bottom: 80px;
+      background: radial-gradient(circle, #ff7c1c 0%, #f43131 100%);
+      filter: blur(2px);
+    }
+    .bg-dot2 {
+      width: 20px; height: 20px;
+      right: 180px; top: 120px;
+      background: radial-gradient(circle, #9c6dff 0%, #5616c4 100%);
+      filter: blur(1px);
+    }
+
+        .parallax-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transform: translateZ(-1px) scale(2);
+            z-index: -1;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        
+
+        /* Registration Form */
+        .register-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(68, 68, 68, 0.169), rgba(13, 1, 41, 0.1));
+        }
+
+        .register-container {
+            background: rgba(0, 0, 0, 0.717);
+            border-radius: 20px;
+            padding: 3rem;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 8px 32px rgba(117, 16, 16, 0);
+            border: 1px solid rgba(156, 109, 255, 0.2);
+        }
+
+        .register-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .register-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--accent-red), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .register-header p {
+            color: var(--text-muted);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: rgba(24, 24, 24, 0.05);
+            border: 1px solid rgba(51, 36, 255, 0.306);
+            border-radius: 8px;
+            color: var(--text-light);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 2px rgba(131, 73, 255, 0.2);
+        }
+
+        .form-group input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--accent-red), var(--primary-color));
+            color: var(--text-light);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .login-link a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .social-login {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .social-login p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .social-login p::before,
+        .social-login p::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 30%;
+            height: 1px;
+            background: rgba(156, 109, 255, 0.2);
+        }
+
+        .social-login p::before {
+            left: 0;
+        }
+
+        .social-login p::after {
+            right: 0;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(156, 109, 255, 0.2);
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background: rgba(255, 255, 255, 0.502);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .register-container {
+                padding: 2rem;
+            }
+
+            .register-header h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Glowing background circles -->
+  <div class="bg-circle bg-purple"></div>
+  <div class="bg-circle bg-orange"></div>
+  <div class="bg-circle bg-dot1"></div>
+  <div class="bg-circle bg-dot2"></div>
+
+      
+    <section class="register-section">
+        <div class="register-container">
+            <div class="register-header">
+                <h1>Create Account</h1>
+                <p>Join Smartfy and transform your business today</p>
+            </div>
+            <form>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">User name</label>
+                    <input type="password" id="confirm-password" placeholder="Enter user name" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+            <div class="social-login">
+                <p>Or sign up with</p>
+                <div class="social-buttons">
+                    <a href="#" class="social-btn"><i class="fab fa-google"></i></a>
+                    <a href="https://github.com/tamimurashid" class="social-btn"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="login-link">
+                Already have an account? <a href="login page.html">Sign in</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Parallax scrolling effect
+        window.addEventListener('scroll', () => {
+            const parallaxBgs = document.querySelectorAll('.parallax-bg');
+            parallaxBgs.forEach(bg => {
+                const speed = 0.5;
+                const yPos = -(window.pageYOffset * speed);
+                bg.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartfy – Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0b0070;
+      --secondary: #9c6dff;
+      --accent: #f43131;
+      --orange: #ff7c1c;
+      --background: #000515;
+      --background-dark: #393838;
+      --card-bg: #18171d;
+      --input-bg: transparent;
+      --input-border: #444;
+      --input-focus: #3300ff;
+      --text: #fff;
+      --text-muted: #ccc;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: var(--background);
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    body {
+      position: relative;
+      min-height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Glowing background circles */
+    .bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(32px);
+      opacity: 0.8;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .bg-purple {
+      width: 350px; height: 350px;
+      left: -120px; top: 80px;
+      background: radial-gradient(circle at 60% 40%, #260078 0%, #5616c4 80%);
+    }
+    .bg-orange {
+      width: 260px; height: 260px;
+      right: -100px; bottom: 40px;
+      background: radial-gradient(circle at 40% 60%, #ff7c1c 0%, #f43131 80%);
+    }
+    .bg-dot1 {
+      width: 24px; height: 24px;
+      left: 60px; bottom: 80px;
+      background: radial-gradient(circle, #ff7c1c 0%, #f43131 100%);
+      filter: blur(2px);
+    }
+    .bg-dot2 {
+      width: 20px; height: 20px;
+      right: 180px; top: 120px;
+      background: radial-gradient(circle, #9c6dff 0%, #5616c4 100%);
+      filter: blur(1px);
+    }
+    /* Login Card */
+    .login-card {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.717);
+      border-radius: 32px;
+      box-shadow: 0 8px 40px 0 rgba(40, 40, 40, 0.059);
+      width: 100%;
+      max-width: 400px;
+      padding: 3rem 2.5rem 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      min-height: 540px;
+    }
+    .login-card h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(90deg, #9c6dff, #fff 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .login-card p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .login-card label {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+      display: block;
+      font-weight: 500;
+    }
+    .login-card input[type='text'],
+    .login-card input[type='password'] {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.2rem;
+      background: var(--input-bg);
+      border: 1.5px solid var(--input-border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 1rem;
+      transition: border 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+    .login-card input[type='text']:focus,
+    .login-card input[type='password']:focus {
+      border-color: var(--input-focus);
+      box-shadow: 0 0 0 2px #ffffff33;
+    }
+    .remember-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      gap: 0.5rem;
+    }
+    .login-card input[type='checkbox'] {
+      accent-color: var(--secondary);
+      width: 1rem;
+      height: 1rem;
+      margin: 0;
+    }
+    h2 {
+      margin: 0;
+      text-align: center;
+      color: rgba(113, 48, 48, 0.947);
+    }
+    .remember-row label {
+      margin: 0;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      cursor: pointer;
+    }
+    .login-btn {
+      width: 100%;
+      padding: 0.9rem 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: linear-gradient(90deg, #cf0909 0%, #bc0e0e 100%);
+      color: #fff;
+      margin-bottom: 1.2rem;
+      cursor: pointer;
+      transition: box-shadow 0.2s, transform 0.2s;
+      box-shadow: 0 2px 12px #00000055;
+    }
+    .login-btn:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 6px 24px #5616c488;
+      background-color: #ffffff;
+    }
+    .login-card .forgot {
+      color: var(--text-muted);
+      text-align: center;
+      font-size: 0.98rem;
+      margin-bottom: 2.2rem;
+      text-decoration: none;
+      display: block;
+      transition: color 0.2s;
+    }
+    .login-card .forgot:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+    .login-card .signup-link {
+      color: var(--text-muted);
+      text-align: center;
+      font-size: 1rem;
+      margin-top: auto;
+    }
+    .login-card .signup-link a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 0.2em;
+      transition: color 0.2s;
+    }
+    .login-card .signup-link a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .login-card {
+        padding: 2rem 1rem 1.5rem 1rem;
+        min-height: 420px;
+      }
+      .bg-purple, .bg-orange {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Glowing background circles -->
+  <div class="bg-circle bg-purple"></div>
+  <div class="bg-circle bg-orange"></div>
+  <div class="bg-circle bg-dot1"></div>
+  <div class="bg-circle bg-dot2"></div>
+
+  <form class="login-card" autocomplete="off">
+    <h2>Login</h2>
+    <p>Welcome back please login to your account.</p>
+    <label for="username">User Name</label>
+    <input type="text" id="username" placeholder="User Name" required>
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Password" required>
+    <div class="remember-row">
+      <input type="checkbox" id="remember" checked>
+      <label for="remember">Remember me</label>
+    </div>
+    <a href="#" class="forgot"><button class="login-btn" type="submit">Login</button></a>
+    <a href="forgot password.html" class="forgot">Forgot password?</a>
+    <div class="signup-link">
+      Don't have an account?
+      <a href="registration.html">Signup</a>
+    </div>
+  </form>
+</body>
+</html>
