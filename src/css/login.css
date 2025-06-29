@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smartfy – Login</title>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
-  <style>
-    :root {
+:root {
       --primary: #0b0070;
       --secondary: #9c6dff;
       --accent: #f43131;
@@ -204,32 +196,3 @@
         display: none;
       }
     }
-  </style>
-</head>
-<body>
-  <!-- Glowing background circles -->
-  <div class="bg-circle bg-purple"></div>
-  <div class="bg-circle bg-orange"></div>
-  <div class="bg-circle bg-dot1"></div>
-  <div class="bg-circle bg-dot2"></div>
-
-  <form class="login-card" autocomplete="off">
-    <h2>Login</h2>
-    <p>Welcome back please login to your account.</p>
-    <label for="username">User Name</label>
-    <input type="text" id="username" placeholder="User Name" required>
-    <label for="password">Password</label>
-    <input type="password" id="password" placeholder="Password" required>
-    <div class="remember-row">
-      <input type="checkbox" id="remember" checked>
-      <label for="remember">Remember me</label>
-    </div>
-    <a href="#" class="forgot"><button class="login-btn" type="submit">Login</button></a>
-    <a href="forgot password.html" class="forgot">Forgot password?</a>
-    <div class="signup-link">
-      Don't have an account?
-      <a href="registration.html">Signup</a>
-    </div>
-  </form>
-</body>
-</html>
